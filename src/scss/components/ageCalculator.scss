@@ -6,19 +6,32 @@
 }
 
 .ageCalculator {
-    width: 500px;
-    height: 500px;
+    padding: 50px;
+    width: 600px;
+    height: 450px;
+    border-radius: 20px;
+    border-bottom-right-radius: 120px;
     margin: auto;
-    background-color: #b8b3b3;
+    background-color: $bg-secondary;
 }
 
 .hr {
     width: 80%;
     height: 5px;
-    background-color: blue;
+    background-color: $bg;
     margin-right: 5px;
 }
 
 .form-text {
     height: 20px;
+}
+
+.btn-primary {
+    background-color: $primary !important;
+    border: 0 !important;
+}
+
+.btn-primary:hover {
+    background-color: $primary-hover !important;
+    border: 0 !important;
 }

@@ -4,7 +4,7 @@ const Input = () => {
       <form>
         <div className="d-flex">
           <div className="p-2">
-            <label className="form-label">Day</label>
+            <label className="form-label">DAY</label>
             <input
               type="number"
               className="form-control"
@@ -13,7 +13,7 @@ const Input = () => {
             <div className="form-text"></div>
           </div>
           <div className="p-2">
-            <label className="form-label">Month</label>
+            <label className="form-label">MONTH</label>
             <input
               type="number"
               className="form-control"
@@ -22,10 +22,10 @@ const Input = () => {
             <div className="form-text"></div>
           </div>
           <div className="p-2">
-            <label className="form-label">Year</label>
+            <label className="form-label">YEAR</label>
             <input
               type="number"
-              className="form-control"
+              className="form-control textSecondary"
               placeholder="YYYY"
             ></input>
             <div className="form-text"></div>
