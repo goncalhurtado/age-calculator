@@ -1,8 +1,13 @@
 .ageCont {
+    width: 100%;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+
+    @media (max-width: 430px) {
+        padding: 10px;
+    }
 }
 
 .ageCalculator {
@@ -13,6 +18,20 @@
     border-bottom-right-radius: 120px;
     margin: auto;
     background-color: $bg-secondary;
+
+    @media (max-width: 430px) {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+}
+
+.inputCont {
+    padding: 0.5rem;
+
+    @media (max-width: 430px) {
+        padding: 0.1rem;
+    }
 }
 
 .hr {
@@ -20,6 +39,11 @@
     height: 5px;
     background-color: $bg;
     margin-right: 5px;
+    margin-left: 0.5rem;
+
+    @media (max-width: 430px) {
+        margin-left: 0;
+    }
 }
 
 .form-text {
@@ -29,6 +53,11 @@
 .btn-primary {
     background-color: $primary !important;
     border: 0 !important;
+    margin-right: 0.5rem;
+
+    @media (max-width: 430px) {
+        margin: 0;
+    }
 }
 
 .btn-primary:hover {
