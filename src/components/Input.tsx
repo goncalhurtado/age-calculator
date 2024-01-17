@@ -1,6 +1,12 @@
-import { InputProps } from "../types/types";
+import { setDateFunc, setResultFunc } from "../types/types";
+import { validate, clearValidation } from "../helpers/validate";
+import { calculateAge } from "../helpers/calculate";
+interface InputProps {
+  setResult: setResultFunc;
+  setDate: setDateFunc;
+}
 
-const Input: React.FC<InputProps> = ({ date, setDate, setResult }) => {
+const Input: React.FC<InputProps> = ({ setDate, setResult }) => {
   const handleDate = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -14,52 +20,58 @@ const Input: React.FC<InputProps> = ({ date, setDate, setResult }) => {
     const month = target.month.value || 0;
     const year = target.year.value || 0;
 
-    if (day === 0 || month === 0 || year === 0) {
-      return alert("Please fill all the fields");
-    }
+    const newDate = { day, month, year };
+    if (!validate(newDate)) return;
 
-    setDate({ day, month, year });
-    setResult({
-      days: day.toString(),
-      months: month.toString(),
-      years: year.toString(),
-    });
-    console.log("date", date);
+    setDate(newDate);
+    calculateAge(newDate, setResult);
   };
 
   return (
     <div>
       <form onSubmit={handleDate}>
         <div className="d-flex">
-          <div className="inputCont">
-            <label className="form-label">DAY</label>
+          <div className="inputCont" id="day">
+            <label className="form-label" id="dayLabel">
+              DAY
+            </label>
             <input
               className="form-control"
               placeholder="DD"
               name="day"
               maxLength={2}
+              id="dayInput"
+              onChange={() => clearValidation()}
             ></input>
-            <div className="form-text"></div>
+            <p className="m-0 form-text text-danger" id="dayText"></p>
           </div>
-          <div className="inputCont">
-            <label className="form-label">MONTH</label>
+          <div className="inputCont" id="month">
+            <label className="form-label" id="monthLabel">
+              MONTH
+            </label>
             <input
-              className="form-control"
+              className="form-control "
               placeholder="MM"
               name="month"
               maxLength={2}
+              id="monthInput"
+              onChange={() => clearValidation()}
             ></input>
-            <div className="form-text"></div>
+            <p className="m-0 form-text text-danger" id="monthText"></p>
           </div>
-          <div className="inputCont">
-            <label className="form-label">YEAR</label>
+          <div className="inputCont" id="year">
+            <label className="form-label" id="yearLabel">
+              YEAR
+            </label>
             <input
-              className="form-control textSecondary"
+              className="form-control "
               placeholder="YYYY"
               name="year"
               maxLength={4}
+              id="yearInput"
+              onChange={() => clearValidation()}
             ></input>
-            <div className="form-text"></div>
+            <p className="m-0 form-text text-danger" id="yearText"></p>
           </div>
         </div>
         <div className="d-flex align-items-center">

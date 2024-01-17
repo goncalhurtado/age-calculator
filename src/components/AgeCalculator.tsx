@@ -13,9 +13,10 @@ export const AgeCalculator = () => {
     months: "--",
     days: "--",
   });
+  console.log(date);
   return (
     <div className="ageCalculator">
-      <Input date={date} setDate={setDate} setResult={setResult} />
+      <Input setDate={setDate} setResult={setResult} />
       <Result result={result} />
     </div>
   );

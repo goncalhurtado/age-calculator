@@ -1,4 +1,8 @@
-import { ResultProps } from "../types/types";
+import { result } from "../types/types";
+
+export interface ResultProps {
+  result: result;
+}
 
 const Result: React.FC<ResultProps> = ({ result }) => {
   return (
