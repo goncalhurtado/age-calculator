@@ -1,12 +1,11 @@
-import { setDateFunc, setResultFunc } from "../types/types";
+import { setResultFunc } from "../types/types";
 import { validate, clearValidation } from "../helpers/validate";
 import { calculateAge } from "../helpers/calculate";
 interface InputProps {
   setResult: setResultFunc;
-  setDate: setDateFunc;
 }
 
-const Input: React.FC<InputProps> = ({ setDate, setResult }) => {
+const Input: React.FC<InputProps> = ({ setResult }) => {
   const handleDate = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -23,7 +22,6 @@ const Input: React.FC<InputProps> = ({ setDate, setResult }) => {
     const newDate = { day, month, year };
     if (!validate(newDate)) return;
 
-    setDate(newDate);
     calculateAge(newDate, setResult);
   };
 

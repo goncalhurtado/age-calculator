@@ -42,13 +42,38 @@ export const validate = (date: DateType) => {
 
     return false;
   }
-  if (year < 1 || year > 9999) {
+  const currentYear = new Date().getFullYear();
+  console.log(currentYear);
+  if (year < 1 || year > currentYear) {
     yearInput.classList.add("is-invalid");
     yearLabel.classList.add("text-danger");
     yearText.innerHTML = "Invalid year";
 
     return false;
   }
+  const currentMonth = new Date().getMonth() + 1;
+  const monthNumber = Number(month);
+
+  if (year == currentYear && monthNumber > currentMonth) {
+    monthInput.classList.add("is-invalid");
+    monthLabel.classList.add("text-danger");
+    monthText.innerHTML = "The date must be before the current date.";
+
+    return false;
+  }
+
+  if (
+    year == currentYear &&
+    monthNumber == currentMonth &&
+    day > new Date().getDate()
+  ) {
+    dayInput.classList.add("is-invalid");
+    dayLabel.classList.add("text-danger");
+    dayText.innerHTML = "The date must be before the current date.";
+
+    return false;
+  }
+
   return true;
 };
 
