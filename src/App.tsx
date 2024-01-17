@@ -8,8 +8,6 @@ function App() {
       style={{
         position: "relative",
         minHeight: "100vh",
-        margin: 0,
-        padding: 0,
       }}
     >
       <Header />

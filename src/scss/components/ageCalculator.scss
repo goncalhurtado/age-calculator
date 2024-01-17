@@ -1,24 +1,66 @@
 .ageCont {
+    width: 100%;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+
+    @media (max-width: 430px) {
+        padding: 10px;
+    }
 }
 
 .ageCalculator {
-    width: 500px;
-    height: 500px;
+    padding: 50px;
+    width: 600px;
+    height: 450px;
+    border-radius: 20px;
+    border-bottom-right-radius: 120px;
     margin: auto;
-    background-color: #b8b3b3;
+    background-color: $bg-secondary;
+
+    @media (max-width: 430px) {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+}
+
+.inputCont {
+    padding: 0.5rem;
+
+    @media (max-width: 430px) {
+        padding: 0.1rem;
+    }
 }
 
 .hr {
     width: 80%;
     height: 5px;
-    background-color: blue;
+    background-color: $bg;
     margin-right: 5px;
+    margin-left: 0.5rem;
+
+    @media (max-width: 430px) {
+        margin-left: 0;
+    }
 }
 
 .form-text {
     height: 20px;
+}
+
+.btn-primary {
+    background-color: $primary !important;
+    border: 0 !important;
+    margin-right: 0.5rem;
+
+    @media (max-width: 430px) {
+        margin: 0;
+    }
+}
+
+.btn-primary:hover {
+    background-color: $primary-hover !important;
+    border: 0 !important;
 }

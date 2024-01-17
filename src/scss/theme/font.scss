@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+
+body {
+    font-family: 'Poppins';
+}
+
+h2 {
+    font-family: 'Poppins' !important;
+    font-weight: 900 !important;
+    font-size: 3rem !important;
+    color: $text-primary !important;
+}
+
+h3 {
+    font-family: 'Poppins' !important;
+    font-weight: 900 !important;
+    font-size: 3rem !important;
+    color: $primary !important;
+}
+
+input {
+    font-family: 'Poppins' !important;
+    font-weight: 600 !important;
+}
+
+label {
+    font-family: 'Poppins' !important;
+    font-weight: 600 !important;
+    font-size: small;
+}
+
+.form-label {
+    color: $text-secondary !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border: none;
+    border-color: $primary !important;
+    box-shadow: 0 0 0 0.25rem #854cff5e !important;
+}
+
+.form-control::placeholder {
+    color: $text-secondary !important;
+    opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+    color: $text-secondary !important;
+}
+
+.form-control::-ms-input-placeholder {
+    color: $text-secondary !important;
+}
+
+.btn {
+    font-family: 'Poppins' !important;
+    font-weight: 600 !important;
+    color: $bg-secondary !important;
+}

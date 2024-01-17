@@ -3,8 +3,8 @@ const Input = () => {
     <div>
       <form>
         <div className="d-flex">
-          <div className="p-2">
-            <label className="form-label">Day</label>
+          <div className="inputCont">
+            <label className="form-label">DAY</label>
             <input
               type="number"
               className="form-control"
@@ -12,8 +12,8 @@ const Input = () => {
             ></input>
             <div className="form-text"></div>
           </div>
-          <div className="p-2">
-            <label className="form-label">Month</label>
+          <div className="inputCont">
+            <label className="form-label">MONTH</label>
             <input
               type="number"
               className="form-control"
@@ -21,18 +21,18 @@ const Input = () => {
             ></input>
             <div className="form-text"></div>
           </div>
-          <div className="p-2">
-            <label className="form-label">Year</label>
+          <div className="inputCont">
+            <label className="form-label">YEAR</label>
             <input
               type="number"
-              className="form-control"
+              className="form-control textSecondary"
               placeholder="YYYY"
             ></input>
             <div className="form-text"></div>
           </div>
         </div>
       </form>
-      <div className="d-flex align-items-center ps-2 pe-2">
+      <div className="d-flex align-items-center">
         <div className="hr"></div>
         <div className="btn btn-primary">Calculate</div>
       </div>

@@ -2,16 +2,16 @@ const Result = () => {
   return (
     <div>
       <div className="d-flex">
-        <h3 className="p-2">--</h3>
-        <h2 className="p-2">Years</h2>
+        <h3 className="ps-2 pe-2">--</h3>
+        <h2 className="">Years</h2>
       </div>
       <div className="d-flex">
-        <h3 className="p-2">--</h3>
-        <h2 className="p-2">Months</h2>
+        <h3 className="ps-2 pe-2">--</h3>
+        <h2 className="">Months</h2>
       </div>
       <div className="d-flex">
-        <h3 className="p-2">--</h3>
-        <h2 className="p-2">Days</h2>
+        <h3 className="ps-2 pe-2">--</h3>
+        <h2 className="">Days</h2>
       </div>
     </div>
   );
