@@ -1,6 +1,6 @@
 # Age Wizard🧙🏻‍♂️
 
-This simple nad charming tool allows users to effortlessly determine their age with precision. Built with TypeScript
+This simple and charming tool allows users to effortlessly determine their age with precision. Built with TypeScript
 
 ## Run
 `npm run dev`
